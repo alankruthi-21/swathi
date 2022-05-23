@@ -19,7 +19,7 @@ pipeline{
             }
             stage("upload to s3"){
                 steps{
-                    sh "aws s3 cp target /hello-${buildno}.war s3://alankruthiart/application/${uildno}/"
+                    sh "aws s3 cp target /hello-${buildno}.war s3://alankruthiart/application/${buildno}/"
                 }
             }
         }
