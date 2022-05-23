@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    parameters {
+    parameters{
             string(name: 'branch',defaultValue :'',description:'')
             string(name: 'buildno',defaultValue:'',description:'')
             string(name: 'serverip',defaultValue:'',description:'')
@@ -10,7 +10,7 @@ pipeline{
             steps{
                 println"here i'm download artifacts from s3"
                 sh """
-                aws s3 cp s3://alankruthiart/application4/${buildno}/hello-${buildno}.war
+                aws s3 cp s3://alankruthiart/application4/${buildno}/hello-${buildno}.war .
                 """
             }
         }
